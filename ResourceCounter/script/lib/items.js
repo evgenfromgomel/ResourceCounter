@@ -46,11 +46,11 @@ var stonePickAxe = new ItemIngr(rec.pickaxe(cobblestone));
 
 
 return {
-	wood : wood,
-	plank : plank,
-	stick : stick,
-	woodPickAxe : woodPickAxe,
-	stonePickAxe : stonePickAxe
+	wood : new SrcIngr("Древесина"),
+	plank : new SrcIngr("Булыжник"),
+	stick : new ItemIngr(rec.plank()),
+	woodPickAxe : new ItemIngr(rec.pickaxe(plank)),
+	stonePickAxe : new ItemIngr(rec.pickaxe(cobblestone))
 }
 
 })();
